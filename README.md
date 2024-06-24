@@ -3,10 +3,9 @@
 
 Este projeto se refere a conclusão do curso "Santander 2024 - Criando Jogos com Godot". Além de um projeto incrível, se trata da realização de um sonho antigo, de produzir meu primeiro game.
 
+O resultado final pode ser conferido em:
 
-## 🚀 Sobre mim
-Sou um estudante de Analise e Desenvolvimento de Sistemas, em transição de carreira, após mais de 10 anos na área de Contratos. Apaixonado por Games🎮 e tecnologia, sempre busquei me desenvolver na área, com cursos e projetos. Sou formado em Direito⚖️, tenho dois filhos, e estou em busca de novos desafios!
-
+- https://gab-gon-tei.itch.io/boundless-warrior
 
 ## Descrição do projeto 🔍
 O projeto se trata de um game, do gênero de ação/survival, onde você controla um guerreiro defendendo sua terra natal da invasão de alguns monstros.
@@ -34,6 +33,12 @@ Por creer que o melhor jeito de realizar um bom trabalho é com empenho, consegu
 # Próximos passos 💡
 - Será implementado uma versão mobile do jogo, aumentando sua acessibilidade com comandos na tela, sensível ao toque. 
 - O jogo terá o sistema de níveis refeitos, para que, ao final de uma horda, seja designado um chefão, em outra tela, seguindo uma outra orientação de gameplay, inspirado em games de RPG de Ação, como os jogos da série Zelda. 
+
+
+
+## 🚀 Sobre mim
+Sou um estudante de Analise e Desenvolvimento de Sistemas, em transição de carreira, após mais de 10 anos na área de Contratos. Apaixonado por Games🎮 e tecnologia, sempre busquei me desenvolver na área, com cursos e projetos. Sou formado em Direito⚖️, tenho dois filhos, e estou em busca de novos desafios!
+
 
 
 # Social

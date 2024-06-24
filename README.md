@@ -21,7 +21,14 @@ Por creer que o melhor jeito de realizar um bom trabalho é com empenho, consegu
 
 # Imagens
 
-![Menu do game](https://imgur.com/uP5vszp)
+![Menu do game](https://i.imgur.com/uP5vszp.png)
+
+![Como jogar](https://i.imgur.com/WkUWWrF.png)
+
+![ação](https://i.imgur.com/8O7c571.png)
+
+![gameover](https://i.imgur.com/HjFsoZ2.png)
+
 
 
 # Próximos passos 💡

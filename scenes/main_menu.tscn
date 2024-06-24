@@ -1,0 +1,253 @@
+[gd_scene load_steps=24 format=3 uid="uid://b034qkoexc1js"]
+
+[ext_resource type="FontFile" uid="uid://my0m50kxuslj" path="res://addons/font_medieval_sharp/MedievalSharp-Bold.ttf" id="1_1u1u5"]
+[ext_resource type="Texture2D" uid="uid://btpteli7iok3g" path="res://addons/Tiny Swords (Update 010)/UI/Banners/Banner_Connection_Right.png" id="1_2yrks"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_jetyq"]
+[ext_resource type="Texture2D" uid="uid://h6cq2pupf7y8" path="res://addons/Background/bg_2.png" id="1_wbu2d"]
+[ext_resource type="Texture2D" uid="uid://cxivx1wi4h2aq" path="res://addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Blue_3Slides.png" id="2_8cgxq"]
+[ext_resource type="Texture2D" uid="uid://cilsri0805780" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="5_b0ed6"]
+[ext_resource type="PackedScene" uid="uid://dsgbi1qvg6kn5" path="res://transition.tscn" id="7_i7s04"]
+[ext_resource type="AudioStream" uid="uid://c8f1pqfeppghb" path="res://addons/SoundEffects/Fantasy RPG Music Vol. 2/mp3/Ambient 3.mp3" id="8_usmp4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eam56"]
+texture = ExtResource("2_8cgxq")
+modulate_color = Color(1.67843, 0.0196078, 1.14902, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k0v2w"]
+texture = ExtResource("1_2yrks")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+region_rect = Rect2(32, 48, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to3gs"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gefm"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2a2mj"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1wsw"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aomxs"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am5b8"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(960, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0spg"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(0, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m3xj"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(192, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ahpf"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(384, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wqjk"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(576, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yra2"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(768, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2a1e6"]
+atlas = ExtResource("5_b0ed6")
+region = Rect2(960, 576, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5e2wx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to3gs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gefm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2a2mj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1wsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aomxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am5b8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_e0spg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m3xj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ahpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wqjk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yra2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2a1e6")
+}],
+"loop": false,
+"name": &"selected",
+"speed": 10.0
+}]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jetyq")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = 3.0
+offset_right = 152.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wbu2d")
+
+[node name="Panel" type="Panel" parent="Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -394.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 193.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_eam56")
+
+[node name="NameGame" type="Label" parent="Background/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.5
+offset_top = -54.5
+offset_right = 175.5
+offset_bottom = 6.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_1u1u5")
+theme_override_font_sizes/font_size = 70
+text = "Boundless Warrior"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -306.0
+offset_right = 519.0
+offset_bottom = -101.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_k0v2w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+offset_left = 57.0
+offset_top = 19.0
+offset_right = 371.0
+offset_bottom = 252.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Play" type="Button" parent="Panel/VBoxContainer" groups=["button"]]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1u1u5")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "Jogar
+"
+flat = true
+
+[node name="Controls" type="Button" parent="Panel/VBoxContainer" groups=["button"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1u1u5")
+theme_override_font_sizes/font_size = 40
+text = "Como jogar
+"
+flat = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -566.0
+offset_top = -294.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Warrior" type="AnimatedSprite2D" parent="HBoxContainer"]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(103, -67)
+scale = Vector2(2.39063, 2.54688)
+sprite_frames = SubResource("SpriteFrames_5e2wx")
+animation = &"selected"
+autoplay = "default"
+frame = 5
+frame_progress = 1.0
+centered = false
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="Transition" parent="." instance=ExtResource("7_i7s04")]
+visible = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_usmp4")
+volume_db = 19.299
+autoplay = true
+attenuation = 1.56917
+
+[connection signal="pressed" from="Panel/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Controls" to="." method="_on_controls_pressed"]

@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://djkftsn2ugure"]
+
+[ext_resource type="Texture2D" uid="uid://cf877opkjrtj6" path="res://addons/Tiny Swords (Update 010)/Resources/Resources/M_Spawn.png" id="1_6da4x"]
+[ext_resource type="Script" path="res://misc/life_regenerator.gd" id="2_pbsbi"]
+[ext_resource type="AudioStream" uid="uid://c1l2fkd0gewbs" path="res://addons/SoundEffects/RPG_Essentials_Free/10_UI_Menu_SFX/001_Hover_01.wav" id="3_y4mrn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o143d"]
+atlas = ExtResource("1_6da4x")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3ikl"]
+atlas = ExtResource("1_6da4x")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hh4mf"]
+atlas = ExtResource("1_6da4x")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klmgr"]
+atlas = ExtResource("1_6da4x")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q8d0"]
+atlas = ExtResource("1_6da4x")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aehfx"]
+atlas = ExtResource("1_6da4x")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trw2i"]
+atlas = ExtResource("1_6da4x")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83oe6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o143d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3ikl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hh4mf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klmgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1q8d0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aehfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trw2i")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xnb0f"]
+radius = 31.0
+height = 62.0
+
+[node name="Meat" type="AnimatedSprite2D"]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_83oe6")
+autoplay = "default"
+frame = 6
+frame_progress = 1.0
+script = ExtResource("2_pbsbi")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 9)
+shape = SubResource("CapsuleShape2D_xnb0f")
+
+[node name="meatcollected" type="AudioStreamPlayer2D" parent="Area2D/CollisionShape2D"]
+position = Vector2(-1, -12)
+stream = ExtResource("3_y4mrn")
